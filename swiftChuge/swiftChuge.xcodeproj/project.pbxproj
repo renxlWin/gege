@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113D90351E813DCB00B9ED72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 113D90341E813DCB00B9ED72 /* Info.plist */; };
 		17D6A2A82B89A81E771A3B7A /* Pods_swiftChugeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */; };
 		1B37ED144F11B43D2940ADCE /* Pods_swiftChugeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */; };
 		94A0FA0B13A77C3773FFAB15 /* Pods_swiftChuge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChugeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		113D90341E813DCB00B9ED72 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		197182A4980CA15D15264ADD /* Pods-swiftChugeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChugeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChugeUITests/Pods-swiftChugeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39C11616BF9950024494E06B /* Pods-swiftChuge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChuge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChuge/Pods-swiftChuge.debug.xcconfig"; sourceTree = "<group>"; };
 		4C77946C6A86C3E9E94C344C /* Pods-swiftChugeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChugeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChugeTests/Pods-swiftChugeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,9 +60,8 @@
 		DFE659A41E80C829007F9EC5 /* swiftChuge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChuge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE659A71E80C829007F9EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = swiftChuge/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		DFE659AC1E80C829007F9EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFE659AE1E80C829007F9EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		DFE659AE1E80C829007F9EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFE659B11E80C829007F9EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DFE659B31E80C829007F9EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		DFE659B81E80C829007F9EC5 /* swiftChugeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftChugeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE659BC1E80C829007F9EC5 /* swiftChugeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftChugeTests.swift; sourceTree = "<group>"; };
 		DFE659BE1E80C829007F9EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113D90361E813DEE00B9ED72 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				113D90341E813DCB00B9ED72 /* Info.plist */,
+				DFE659AE1E80C829007F9EC5 /* Assets.xcassets */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		7C400DD150CFC719E9B73669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 				DFE659D51E80CA05007F9EC5 /* Lib */,
 				DF6643331E811F8500F17EF3 /* Category */,
 				DFE659EC1E80CA05007F9EC5 /* Tool */,
+				113D90361E813DEE00B9ED72 /* Support */,
 				DFE659EB1E80CA05007F9EC5 /* Other */,
 			);
 			path = swiftChuge;
@@ -389,9 +400,7 @@
 			children = (
 				DFE659A71E80C829007F9EC5 /* AppDelegate.swift */,
 				DFE659AB1E80C829007F9EC5 /* Main.storyboard */,
-				DFE659AE1E80C829007F9EC5 /* Assets.xcassets */,
 				DFE659B01E80C829007F9EC5 /* LaunchScreen.storyboard */,
-				DFE659B31E80C829007F9EC5 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -557,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113D90351E813DCB00B9ED72 /* Info.plist in Resources */,
 				DFE659B21E80C829007F9EC5 /* LaunchScreen.storyboard in Resources */,
 				DFE659AF1E80C829007F9EC5 /* Assets.xcassets in Resources */,
 				DFE659AD1E80C829007F9EC5 /* Main.storyboard in Resources */,
