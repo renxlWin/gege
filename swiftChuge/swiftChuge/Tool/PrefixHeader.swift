@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SnapKit
+
+//MARK : 请求地址
 
 //用户账户
 let SERVER_URL_USER = "http://test.imchuge.com/userAccount/"
@@ -28,7 +31,7 @@ let SERVER_URL_Alipay = "http://test.imchuge.com/payment/"
 //声音
 let SERVER_URL_Media = "http://test.imchuge.com/media/"
 
-
+//MARK:颜色相关
 /** 背景颜色 */
 let Background_color = set_color(red:250,green:250,blue:250,alpha:1)
 
@@ -38,3 +41,11 @@ func set_color(red:CGFloat,green:CGFloat,blue:CGFloat,alpha: CGFloat) -> UIColor
     
     return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha);
 }
+
+//MARK:高度相关
+
+let screenHeight = UIScreen.main.bounds.height;
+let screenWidth = UIScreen.main.bounds.width;
+
+
+

@@ -177,8 +177,8 @@
 				DFE659D51E80CA05007F9EC5 /* Lib */,
 				DF6643331E811F8500F17EF3 /* Category */,
 				DFE659EC1E80CA05007F9EC5 /* Tool */,
-				113D90361E813DEE00B9ED72 /* Support */,
 				DFE659EB1E80CA05007F9EC5 /* Other */,
+				113D90361E813DEE00B9ED72 /* Support */,
 			);
 			path = swiftChuge;
 			sourceTree = "<group>";
