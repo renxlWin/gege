@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RxHomeVC: RxBaseVC {
+class RxNearVC: RxBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

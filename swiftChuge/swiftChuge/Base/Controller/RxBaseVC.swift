@@ -12,16 +12,17 @@ class RxBaseVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = Background_color;
+        setNav();
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setNav(){
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(color: mainThemeColor), for: .any, barMetrics: .default);
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white];
+        
     }
     
-
-
-
+    
 }
