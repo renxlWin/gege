@@ -18,7 +18,6 @@ class RxTabBarVC: UITabBarController {
         setTabBar();
     }
     
-    
     private func setupChildVC(){
         
         let homeVC = RxNearVC();
