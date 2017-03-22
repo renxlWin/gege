@@ -16,9 +16,11 @@ class RxTabBarVC: UITabBarController {
         setupChildVC();
         
         setTabBar();
+        
     }
     
     private func setupChildVC(){
+        
         
         let homeVC = RxNearVC();
         navController(vc: homeVC, title: "附近", image: "near", selectImg: "near_sel");
@@ -49,6 +51,14 @@ class RxTabBarVC: UITabBarController {
     
     private func setTabBar(){
         
+        //自定义TabBar
+        
+        let tabBar = RxTabBar();
+        
+        tabBar.tabBarDelegate = self;
+        
+        self.setValue(tabBar, forKeyPath: "tabBar");
+        
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.clear], for: .normal);
         
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.clear], for: .selected);
@@ -58,5 +68,14 @@ class RxTabBarVC: UITabBarController {
             vc.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
             
         }
+    }
+}
+
+extension RxTabBarVC : RxTabBarDelegate{
+    
+    func tabBarPlusBtnClick(){
+        
+        print("点击了加号");
+        
     }
 }

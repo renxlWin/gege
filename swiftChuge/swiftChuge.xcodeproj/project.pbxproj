@@ -11,6 +11,7 @@
 		17D6A2A82B89A81E771A3B7A /* Pods_swiftChugeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */; };
 		1B37ED144F11B43D2940ADCE /* Pods_swiftChugeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */; };
 		94A0FA0B13A77C3773FFAB15 /* Pods_swiftChuge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */; };
+		DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38AABE1E820EC500725252 /* RxTabBar.swift */; };
 		DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */; };
 		DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643341E81204700F17EF3 /* UIImage+Extension.swift */; };
 		DFE659A81E80C829007F9EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE659A71E80C829007F9EC5 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		811D901E59C0031FE86C51C4 /* Pods-swiftChuge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChuge.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChuge/Pods-swiftChuge.release.xcconfig"; sourceTree = "<group>"; };
 		83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChugeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChuge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF38AABE1E820EC500725252 /* RxTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTabBar.swift; sourceTree = "<group>"; };
 		DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		DF6643341E81204700F17EF3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DFE659A41E80C829007F9EC5 /* swiftChuge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChuge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -435,6 +437,7 @@
 		DFE659F11E80CF22007F9EC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF38AABE1E820EC500725252 /* RxTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				DFE65A001E80D110007F9EC5 /* RxMessageVC.swift in Sources */,
 				DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */,
 				DFE659A81E80C829007F9EC5 /* AppDelegate.swift in Sources */,
+				DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */,
 				DFE659F81E80D088007F9EC5 /* RxBaseVC.swift in Sources */,
 				DFE659FC1E80D0E9007F9EC5 /* RxNearVC.swift in Sources */,
 			);

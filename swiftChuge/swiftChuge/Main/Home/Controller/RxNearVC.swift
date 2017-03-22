@@ -18,7 +18,7 @@ class RxNearVC: RxBaseVC {
     }
     
     //MARK:界面布局
-    private func prepareUI(){
+    private func prepareUI() {
         
         setNav();
         
@@ -39,7 +39,9 @@ class RxNearVC: RxBaseVC {
     
     func changeView(){
         
-        print("hhaha");
+        let index : CGFloat = CGFloat(titleSegment.selectedSegmentIndex);
+        
+        contentScroll.setContentOffset(CGPoint(x: screenWidth * index , y : 0), animated: true);
         
     }
     
@@ -48,7 +50,7 @@ class RxNearVC: RxBaseVC {
         
         let scrollView = UIScrollView();
         
-        scrollView.backgroundColor = UIColor.red;
+        scrollView.backgroundColor = UIColor.white;
         
         scrollView.contentSize = CGSize(width: screenWidth * 3, height: 0)
         
@@ -70,12 +72,13 @@ class RxNearVC: RxBaseVC {
         
         segment.tintColor = UIColor.white;
         
+        segment.selectedSegmentIndex = 1;
+        
         let font = UIFont.systemFont(ofSize: 16);
         
         segment.setTitleTextAttributes([NSFontAttributeName : font], for: .normal);
         
-        segment.addTarget(self, action:#selector(RxNearVC.changeView), for: .touchUpInside);
-        
+        segment.addTarget(self, action:#selector(RxNearVC.changeView), for: .valueChanged);
         
         return segment;
     }();
