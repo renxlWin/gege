@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import Alamofire
+
 
 //MARK : 请求地址
 //用户账户
@@ -43,6 +43,9 @@ func set_color(red:CGFloat,green:CGFloat,blue:CGFloat,alpha: CGFloat) -> UIColor
     
     return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha);
 }
+
+//MARK:单例
+let RxNetWorkInstance = RxNetRequstManager.sharedInstance;
 
 //MARK:高度相关
 

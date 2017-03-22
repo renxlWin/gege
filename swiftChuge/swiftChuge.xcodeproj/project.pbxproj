@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		113D90351E813DCB00B9ED72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 113D90341E813DCB00B9ED72 /* Info.plist */; };
+		11CAD0011E82BB870063BA8A /* RxNetRequstManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CAD0001E82BB870063BA8A /* RxNetRequstManager.swift */; };
 		17D6A2A82B89A81E771A3B7A /* Pods_swiftChugeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */; };
 		1B37ED144F11B43D2940ADCE /* Pods_swiftChugeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */; };
 		94A0FA0B13A77C3773FFAB15 /* Pods_swiftChuge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChugeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		113D90341E813DCB00B9ED72 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CAD0001E82BB870063BA8A /* RxNetRequstManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNetRequstManager.swift; sourceTree = "<group>"; };
 		197182A4980CA15D15264ADD /* Pods-swiftChugeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChugeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChugeUITests/Pods-swiftChugeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39C11616BF9950024494E06B /* Pods-swiftChuge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChuge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChuge/Pods-swiftChuge.debug.xcconfig"; sourceTree = "<group>"; };
 		4C77946C6A86C3E9E94C344C /* Pods-swiftChugeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChugeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChugeTests/Pods-swiftChugeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */,
+				11CAD0001E82BB870063BA8A /* RxNetRequstManager.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -536,7 +539,7 @@
 				TargetAttributes = {
 					DFE659A31E80C829007F9EC5 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P7U52R78ZF;
+						DevelopmentTeam = 9L7KL2MSZ7;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -756,6 +759,7 @@
 				DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */,
 				DFE659A81E80C829007F9EC5 /* AppDelegate.swift in Sources */,
 				DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */,
+				11CAD0011E82BB870063BA8A /* RxNetRequstManager.swift in Sources */,
 				DFE659F81E80D088007F9EC5 /* RxBaseVC.swift in Sources */,
 				DFE659FC1E80D0E9007F9EC5 /* RxNearVC.swift in Sources */,
 			);
@@ -913,13 +917,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = P7U52R78ZF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9L7KL2MSZ7;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = swiftChuge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rxl.swiftChuge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rxl.chuge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "swiftChuge-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -935,13 +940,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = P7U52R78ZF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9L7KL2MSZ7;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = swiftChuge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rxl.swiftChuge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rxl.chuge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "swiftChuge-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

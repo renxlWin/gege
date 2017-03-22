@@ -15,6 +15,8 @@ class RxNearHeadVC: RxBaseVC {
         super.viewDidLoad()
         
         prepareUI();
+        
+        loadInfo();
     }
     
     
@@ -64,6 +66,16 @@ class RxNearHeadVC: RxBaseVC {
 extension RxNearHeadVC {
     
     func loadInfo(){
+        
+        let urlStr = SERVER_URL_Date.appending("user/datemanagenet/rollMessage/v1");
+        
+        RxNetWorkInstance.postRequest(urlString: urlStr, params: ["type":""], success: { (result) in
+            
+            print(result);
+            
+        }) { (error) in
+            
+        };
         
     }
     
