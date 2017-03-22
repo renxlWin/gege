@@ -8,9 +8,9 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 //MARK : 请求地址
-
 //用户账户
 let SERVER_URL_USER = "http://test.imchuge.com/userAccount/"
 //用户登录注册

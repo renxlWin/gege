@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RxNearHeadVC: RxBaseVC {
 
     override func viewDidLoad() {
@@ -16,82 +17,6 @@ class RxNearHeadVC: RxBaseVC {
         prepareUI();
     }
     
-    private func prepareUI(){
-        
-        view.backgroundColor = UIColor.white;
-        view.addSubview(headImg);
-        view.addSubview(tableView);
-        
-        headImg.snp.makeConstraints { (make) in
-          
-            make.leading.equalTo(view).offset(20);
-            
-            make.top.equalTo(view).offset(10);
-            
-            
-            make.size.equalTo((headImg.image?.size)!);
-        };
-        
-        let lineView = UIView();
-        
-        lineView.backgroundColor = lineColor;
-        
-        view.addSubview(lineView);
-        
-        lineView.snp.makeConstraints { (make) in
-          
-            make.leading.equalTo(headImg.snp.trailing).offset(20);
-            
-            make.top.bottom.equalTo(headImg);
-            
-            make.width.equalTo(1);
-        };
-        
-        tableView.snp.makeConstraints { (make) in
-          
-            make.bottom.top.equalTo(headImg);
-            
-            make.leading.equalTo(lineView.snp.trailing).offset(20);
-            
-            make.trailing.equalTo(view);
-        };
-        
-        let lineViewTwo = UIView();
-        
-        lineViewTwo.backgroundColor = lineColor;
-        
-        view.addSubview(lineViewTwo);
-        
-        lineViewTwo.snp.makeConstraints { (make) in
-            
-            make.top.equalTo(headImg.snp.bottom).offset(10)
-            
-            make.trailing.leading.equalToSuperview();
-            
-            make.height.equalTo(10);
-        };
-        
-        view.addSubview(bottomImg);
-        
-        bottomImg.snp.makeConstraints { (make) in
-          
-            make.leading.equalTo(view);
-            
-            make.top.equalTo(lineViewTwo.snp.bottom).offset(5);
-            
-            make.bottom.equalToSuperview();
-            
-        };
-        
-        bottomImg.addSubview(tipLabel);
-        
-        tipLabel.snp.makeConstraints { (make) in
-          
-            make.center.equalToSuperview();
-            
-        };
-        
-    }
     
     lazy var tableView : UITableView = {
        
@@ -134,6 +59,95 @@ class RxNearHeadVC: RxBaseVC {
         
         return tipLabel;
     }()
+}
+
+extension RxNearHeadVC {
+    
+    func loadInfo(){
+        
+    }
+    
+}
+
+extension RxNearHeadVC {
+    
+    func prepareUI(){
+        
+        view.backgroundColor = UIColor.white;
+        view.addSubview(headImg);
+        view.addSubview(tableView);
+        
+        headImg.snp.makeConstraints { (make) in
+            
+            make.leading.equalTo(view).offset(20);
+            
+            make.top.equalTo(view).offset(10);
+            
+            
+            make.size.equalTo((headImg.image?.size)!);
+        };
+        
+        let lineView = UIView();
+        
+        lineView.backgroundColor = lineColor;
+        
+        view.addSubview(lineView);
+        
+        lineView.snp.makeConstraints { (make) in
+            
+            make.leading.equalTo(headImg.snp.trailing).offset(20);
+            
+            make.top.bottom.equalTo(headImg);
+            
+            make.width.equalTo(1);
+        };
+        
+        tableView.snp.makeConstraints { (make) in
+            
+            make.bottom.top.equalTo(headImg);
+            
+            make.leading.equalTo(lineView.snp.trailing).offset(20);
+            
+            make.trailing.equalTo(view);
+        };
+        
+        let lineViewTwo = UIView();
+        
+        lineViewTwo.backgroundColor = lineColor;
+        
+        view.addSubview(lineViewTwo);
+        
+        lineViewTwo.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(headImg.snp.bottom).offset(10)
+            
+            make.trailing.leading.equalToSuperview();
+            
+            make.height.equalTo(10);
+        };
+        
+        view.addSubview(bottomImg);
+        
+        bottomImg.snp.makeConstraints { (make) in
+            
+            make.leading.equalTo(view);
+            
+            make.top.equalTo(lineViewTwo.snp.bottom).offset(5);
+            
+            make.bottom.equalToSuperview();
+            
+        };
+        
+        bottomImg.addSubview(tipLabel);
+        
+        tipLabel.snp.makeConstraints { (make) in
+            
+            make.center.equalToSuperview();
+            
+        };
+        
+    }
+
 }
 
 extension RxNearHeadVC : UITableViewDelegate,UITableViewDataSource{

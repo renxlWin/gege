@@ -116,4 +116,11 @@ extension RxNearVC {
 //MARK:代理
 extension RxNearVC : UIScrollViewDelegate{
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let index = scrollView.mj_offsetX / screenWidth;
+        
+        titleSegment.selectedSegmentIndex = Int(index);
+    }
+    
 }

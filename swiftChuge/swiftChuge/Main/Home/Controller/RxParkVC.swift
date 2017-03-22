@@ -16,8 +16,6 @@ class RxParkVC: RxBaseVC {
         prepareUI();
     }
 
-
-
     // MARK: - lazyLoding
     lazy var headVC : RxNearHeadVC = {
         
