@@ -10,6 +10,7 @@ target 'swiftChuge' do
   pod 'MJRefresh'
   pod 'SVProgressHUD'
   pod 'MJExtension'
+  pod 'Alamofire'
   
   target 'swiftChugeTests' do
     inherit! :search_paths

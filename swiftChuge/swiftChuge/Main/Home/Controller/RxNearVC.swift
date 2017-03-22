@@ -17,51 +17,7 @@ class RxNearVC: RxBaseVC {
         
     }
     
-    //MARK:界面布局
-    private func prepareUI() {
-        
-        setNav();
-        
-        view.addSubview(contentScroll);
-        
-        contentScroll.snp.makeConstraints { (make) in
-            
-            make.edges.equalToSuperview().inset(UIEdgeInsetsMake(0, 0, 44, 0));
-            
-        }
-        
-        contentScroll.addSubview(headVC.view);
-        
-        headVC.view.snp.makeConstraints { (make) in
-          
-            make.leading.top.equalToSuperview();
-            make.width.equalTo(screenWidth);
-        };
-    }
-    
-    private func setNav(){
-        
-        self.navigationItem.titleView = titleSegment;
-        
-    }
-    
-    //MARK:点击事件
-    func changeView(){
-        
-        let index : CGFloat = CGFloat(titleSegment.selectedSegmentIndex);
-        
-        contentScroll.setContentOffset(CGPoint(x: screenWidth * index , y : 0), animated: true);
-        
-    }
-    
     //MARK:懒加载
-    lazy var headVC : RxNearHeadVC = {
-       
-        let headVC = RxNearHeadVC()
-        
-        return headVC;
-    }()
-    
     
     lazy var contentScroll : UIScrollView = {
         
@@ -91,7 +47,7 @@ class RxNearVC: RxBaseVC {
         
         segment.tintColor = UIColor.white;
         
-        segment.selectedSegmentIndex = 1;
+        segment.selectedSegmentIndex = 0;
         
         let font = UIFont.systemFont(ofSize: 16);
         
@@ -102,6 +58,59 @@ class RxNearVC: RxBaseVC {
         return segment;
     }();
     
+    
+    lazy var parkVC : RxParkVC = {
+       
+        let parkVC = RxParkVC();
+        
+        return parkVC;
+    }()
+}
+
+//MARK:界面布局
+extension RxNearVC {
+    
+    func prepareUI() {
+        
+        setNav();
+        
+        view.addSubview(contentScroll);
+        
+        contentScroll.snp.makeConstraints { (make) in
+            
+            make.edges.equalToSuperview().inset(UIEdgeInsetsMake(0, 0, 44, 0));
+            
+        }
+        
+        contentScroll.addSubview(parkVC.view);
+        
+        parkVC.view.snp.makeConstraints { (make) in
+          
+            make.leading.top.equalToSuperview();
+            
+            make.width.equalTo(screenWidth);
+            
+        };
+        
+    }
+    
+    private func setNav(){
+        
+        self.navigationItem.titleView = titleSegment;
+        
+    }
+}
+
+//MARK:按钮点击事件
+extension RxNearVC {
+    
+    func changeView(){
+        
+        let index : CGFloat = CGFloat(titleSegment.selectedSegmentIndex);
+        
+        contentScroll.setContentOffset(CGPoint(x: screenWidth * index , y : 0), animated: true);
+        
+    }
 }
 
 //MARK:代理

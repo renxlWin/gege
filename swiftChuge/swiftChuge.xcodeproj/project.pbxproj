@@ -16,6 +16,7 @@
 		DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643341E81204700F17EF3 /* UIImage+Extension.swift */; };
 		DFC918191E82579E00E36B19 /* RxNearHeadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */; };
 		DFC9181B1E82644300E36B19 /* RxHomeHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9181A1E82644300E36B19 /* RxHomeHeadCell.swift */; };
+		DFC9181D1E826B9200E36B19 /* RxParkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9181C1E826B9200E36B19 /* RxParkVC.swift */; };
 		DFE659A81E80C829007F9EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE659A71E80C829007F9EC5 /* AppDelegate.swift */; };
 		DFE659AD1E80C829007F9EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE659AB1E80C829007F9EC5 /* Main.storyboard */; };
 		DFE659AF1E80C829007F9EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE659AE1E80C829007F9EC5 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		DF6643341E81204700F17EF3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNearHeadVC.swift; sourceTree = "<group>"; };
 		DFC9181A1E82644300E36B19 /* RxHomeHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxHomeHeadCell.swift; path = swiftChuge/Main/Home/Controller/RxHomeHeadCell.swift; sourceTree = SOURCE_ROOT; };
+		DFC9181C1E826B9200E36B19 /* RxParkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkVC.swift; sourceTree = "<group>"; };
 		DFE659A41E80C829007F9EC5 /* swiftChuge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChuge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE659A71E80C829007F9EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = swiftChuge/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		DFE659AC1E80C829007F9EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE659FB1E80D0E9007F9EC5 /* RxNearVC.swift */,
+				DFC9181C1E826B9200E36B19 /* RxParkVC.swift */,
 				DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */,
 			);
 			path = Controller;
@@ -728,6 +731,7 @@
 			files = (
 				DFE659FE1E80D0FA007F9EC5 /* RxWishVC.swift in Sources */,
 				DFE659F41E80CFA3007F9EC5 /* RxTabBarVC.swift in Sources */,
+				DFC9181D1E826B9200E36B19 /* RxParkVC.swift in Sources */,
 				DFE65A021E80D11E007F9EC5 /* RxAccountVC.swift in Sources */,
 				DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */,
 				DFC9181B1E82644300E36B19 /* RxHomeHeadCell.swift in Sources */,
