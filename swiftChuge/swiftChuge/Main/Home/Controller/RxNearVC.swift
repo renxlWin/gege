@@ -29,6 +29,14 @@ class RxNearVC: RxBaseVC {
             make.edges.equalToSuperview().inset(UIEdgeInsetsMake(0, 0, 44, 0));
             
         }
+        
+        contentScroll.addSubview(headVC.view);
+        
+        headVC.view.snp.makeConstraints { (make) in
+          
+            make.leading.top.equalToSuperview();
+            make.width.equalTo(screenWidth);
+        };
     }
     
     private func setNav(){
@@ -37,6 +45,7 @@ class RxNearVC: RxBaseVC {
         
     }
     
+    //MARK:点击事件
     func changeView(){
         
         let index : CGFloat = CGFloat(titleSegment.selectedSegmentIndex);
@@ -46,6 +55,14 @@ class RxNearVC: RxBaseVC {
     }
     
     //MARK:懒加载
+    lazy var headVC : RxNearHeadVC = {
+       
+        let headVC = RxNearHeadVC()
+        
+        return headVC;
+    }()
+    
+    
     lazy var contentScroll : UIScrollView = {
         
         let scrollView = UIScrollView();
@@ -57,6 +74,8 @@ class RxNearVC: RxBaseVC {
         scrollView.delegate = self;
         
         scrollView.isPagingEnabled = true;
+        
+        scrollView.bounces = false;
         
         scrollView.showsHorizontalScrollIndicator = false;
         

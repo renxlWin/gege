@@ -37,6 +37,8 @@ let Background_color = set_color(red:250,green:250,blue:250,alpha:1)
 
 let mainThemeColor = set_color(red:214,green:86,blue:56,alpha:1)
 
+let lineColor = set_color(red:235,green:235,blue:235,alpha:1)
+
 func set_color(red:CGFloat,green:CGFloat,blue:CGFloat,alpha: CGFloat) -> UIColor{
     
     return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha);
