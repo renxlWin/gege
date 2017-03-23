@@ -74,7 +74,15 @@ extension RxNearHeadVC {
         
         RxNetManager.post(urlStr, parameters: ["type":emptyString], progress: nil, success: { (task, responseObject) in
             
-            print(responseObject);
+            let result = responseObject as? [String: AnyObject];
+            
+            if let dict = result {
+                
+                let listArr = dict["rollMessages"];
+                
+                print(listArr);
+                
+            }
             
         }) {  (task, error) in
             
