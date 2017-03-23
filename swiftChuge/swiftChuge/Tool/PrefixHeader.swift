@@ -12,21 +12,21 @@ import SnapKit
 
 //MARK : 请求地址
 //用户账户
-let SERVER_URL_USER = "http://test.imchuge.com/userAccount/"
+let SERVER_URL_USER = "https://test.imchuge.com/userAccount/"
 //用户登录注册
-let SERVER_URL_Register = "http://test.imchuge.com/register/"
+let SERVER_URL_Register = "https://test.imchuge.com/register/"
 
 //用户动态
-let SERVER_URL_Dynamic = "http://test.imchuge.com/dynamic/"
+let SERVER_URL_Dynamic = "https://test.imchuge.com/dynamic/"
 
 //用户约会
 let SERVER_URL_Date  = "http://test.imchuge.com/date/"
 
 //用户举报
-let SERVER_URL_Report = "http://test.imchuge.com/report/"
+let SERVER_URL_Report = "https://test.imchuge.com/report/"
 
 //支付
-let SERVER_URL_Alipay = "http://test.imchuge.com/payment/"
+let SERVER_URL_Alipay = "https://test.imchuge.com/payment/"
 
 //声音
 let SERVER_URL_Media = "http://test.imchuge.com/media/"
@@ -45,7 +45,7 @@ func set_color(red:CGFloat,green:CGFloat,blue:CGFloat,alpha: CGFloat) -> UIColor
 }
 
 //MARK:单例
-let RxNetWorkInstance = RxNetRequstManager.sharedInstance;
+let RxNetManager = RxNetTool.sharedInstance;
 
 //MARK:高度相关
 

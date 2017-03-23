@@ -11,6 +11,7 @@ target 'swiftChuge' do
   pod 'SVProgressHUD'
   pod 'MJExtension'
   pod 'Alamofire'
+  pod 'AFNetworking'
   
   target 'swiftChugeTests' do
     inherit! :search_paths

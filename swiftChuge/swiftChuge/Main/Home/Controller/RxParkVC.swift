@@ -14,6 +14,7 @@ class RxParkVC: RxBaseVC {
         super.viewDidLoad()
 
         prepareUI();
+        
     }
 
     // MARK: - lazyLoding

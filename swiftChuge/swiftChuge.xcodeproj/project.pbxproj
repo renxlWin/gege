@@ -13,6 +13,7 @@
 		1B37ED144F11B43D2940ADCE /* Pods_swiftChugeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */; };
 		94A0FA0B13A77C3773FFAB15 /* Pods_swiftChuge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */; };
 		DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38AABE1E820EC500725252 /* RxTabBar.swift */; };
+		DF5979661E83707400D55459 /* RxNetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5979651E83707400D55459 /* RxNetTool.swift */; };
 		DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */; };
 		DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643341E81204700F17EF3 /* UIImage+Extension.swift */; };
 		DFC918191E82579E00E36B19 /* RxNearHeadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */; };
@@ -62,6 +63,7 @@
 		83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChugeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChuge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF38AABE1E820EC500725252 /* RxTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTabBar.swift; sourceTree = "<group>"; };
+		DF5979651E83707400D55459 /* RxNetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNetTool.swift; sourceTree = "<group>"; };
 		DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		DF6643341E81204700F17EF3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNearHeadVC.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */,
+				DF5979651E83707400D55459 /* RxNetTool.swift */,
 				11CAD0001E82BB870063BA8A /* RxNetRequstManager.swift */,
 			);
 			path = Tool;
@@ -754,6 +757,7 @@
 				DFE65A021E80D11E007F9EC5 /* RxAccountVC.swift in Sources */,
 				DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */,
 				DFC9181B1E82644300E36B19 /* RxHomeHeadCell.swift in Sources */,
+				DF5979661E83707400D55459 /* RxNetTool.swift in Sources */,
 				DFE65A001E80D110007F9EC5 /* RxMessageVC.swift in Sources */,
 				DFC918191E82579E00E36B19 /* RxNearHeadVC.swift in Sources */,
 				DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */,

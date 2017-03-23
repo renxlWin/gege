@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class RxNearHeadVC: RxBaseVC {
 
@@ -17,6 +17,7 @@ class RxNearHeadVC: RxBaseVC {
         prepareUI();
         
         loadInfo();
+        
     }
     
     
@@ -69,12 +70,15 @@ extension RxNearHeadVC {
         
         let urlStr = SERVER_URL_Date.appending("user/datemanagenet/rollMessage/v1");
         
-        RxNetWorkInstance.postRequest(urlString: urlStr, params: ["type":""], success: { (result) in
+        let emptyString = "a";
+        
+        RxNetManager.post(urlStr, parameters: ["type":emptyString], progress: nil, success: { (task, responseObject) in
             
-            print(result);
+            print(responseObject);
             
-        }) { (error) in
+        }) {  (task, error) in
             
+            print(error);
         };
         
     }

@@ -16,8 +16,6 @@ class RxNetRequstManager: NSObject {
     class var sharedInstance : RxNetRequstManager {
         return RxNetManagerInstance;
     }
-    
-    
 }
 extension RxNetRequstManager {
     
