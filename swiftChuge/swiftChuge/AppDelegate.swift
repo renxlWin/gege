@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible();
         
-        return true
+        RxLocationManager.startLocation();
+        
+        return true;
     }
     
     private func defalutVC() -> UIViewController{

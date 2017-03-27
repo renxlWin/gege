@@ -74,15 +74,15 @@ extension RxNearHeadVC {
         
         RxNetManager.post(urlStr, parameters: ["type":emptyString], progress: nil, success: { (task, responseObject) in
             
-            let result = responseObject as? [String: AnyObject];
-            
-            if let dict = result {
-                
-                let listArr = dict["rollMessages"];
-                
-                print(listArr);
-                
-            }
+//            let result = responseObject as? [String: AnyObject];
+//            
+//            if let dict = result {
+//                
+//                let listArr = dict["rollMessages"];
+//                
+//                print(listArr);
+//                
+//            }
             
         }) {  (task, error) in
             
@@ -158,7 +158,6 @@ extension RxNearHeadVC {
             
             make.top.equalTo(lineViewTwo.snp.bottom).offset(5);
             
-            make.bottom.equalToSuperview();
             
         };
         

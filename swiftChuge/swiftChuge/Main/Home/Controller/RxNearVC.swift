@@ -86,7 +86,7 @@ extension RxNearVC {
         
         parkVC.view.snp.makeConstraints { (make) in
           
-            make.leading.top.equalToSuperview();
+            make.leading.height.top.equalToSuperview();
             
             make.width.equalTo(screenWidth);
             

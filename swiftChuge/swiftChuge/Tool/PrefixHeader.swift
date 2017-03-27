@@ -46,6 +46,14 @@ func set_color(red:CGFloat,green:CGFloat,blue:CGFloat,alpha: CGFloat) -> UIColor
 
 //MARK:单例
 let RxNetManager = RxNetTool.sharedInstance;
+let RxLocationManager = RxLocationTool.sharedInstance;
+
+
+//MARK : 位置
+let currentLatitude = RxLocationManager.latitude;
+let currentLongitude = RxLocationManager.longitude;
+
+
 
 //MARK:高度相关
 

@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		113D90351E813DCB00B9ED72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 113D90341E813DCB00B9ED72 /* Info.plist */; };
 		11CAD0011E82BB870063BA8A /* RxNetRequstManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CAD0001E82BB870063BA8A /* RxNetRequstManager.swift */; };
 		17D6A2A82B89A81E771A3B7A /* Pods_swiftChugeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */; };
 		1B37ED144F11B43D2940ADCE /* Pods_swiftChugeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06035821B6CF2389733EEACE /* Pods_swiftChugeTests.framework */; };
 		94A0FA0B13A77C3773FFAB15 /* Pods_swiftChuge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */; };
 		DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38AABE1E820EC500725252 /* RxTabBar.swift */; };
+		DF5199791E88B4D50089D5AB /* RxLocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5199781E88B4D50089D5AB /* RxLocationTool.swift */; };
+		DF51997B1E88FC310089D5AB /* RxParkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51997A1E88FC310089D5AB /* RxParkViewModel.swift */; };
 		DF5979661E83707400D55459 /* RxNetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5979651E83707400D55459 /* RxNetTool.swift */; };
 		DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */; };
 		DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643341E81204700F17EF3 /* UIImage+Extension.swift */; };
@@ -63,6 +64,8 @@
 		83D47212BDE9D71D79B0B8D0 /* Pods_swiftChugeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChugeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChuge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF38AABE1E820EC500725252 /* RxTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTabBar.swift; sourceTree = "<group>"; };
+		DF5199781E88B4D50089D5AB /* RxLocationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxLocationTool.swift; sourceTree = "<group>"; };
+		DF51997A1E88FC310089D5AB /* RxParkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxParkViewModel.swift; path = swiftChuge/Tool/RxParkViewModel.swift; sourceTree = SOURCE_ROOT; };
 		DF5979651E83707400D55459 /* RxNetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNetTool.swift; sourceTree = "<group>"; };
 		DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		DF6643341E81204700F17EF3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -310,6 +313,7 @@
 		DFE659E01E80CA05007F9EC5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DF51997A1E88FC310089D5AB /* RxParkViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,6 +412,7 @@
 				DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */,
 				DF5979651E83707400D55459 /* RxNetTool.swift */,
 				11CAD0001E82BB870063BA8A /* RxNetRequstManager.swift */,
+				DF5199781E88B4D50089D5AB /* RxLocationTool.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -585,7 +590,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				113D90351E813DCB00B9ED72 /* Info.plist in Resources */,
 				DFE659B21E80C829007F9EC5 /* LaunchScreen.storyboard in Resources */,
 				DFE659AF1E80C829007F9EC5 /* Assets.xcassets in Resources */,
 				DFE659AD1E80C829007F9EC5 /* Main.storyboard in Resources */,
@@ -751,11 +755,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5199791E88B4D50089D5AB /* RxLocationTool.swift in Sources */,
 				DFE659FE1E80D0FA007F9EC5 /* RxWishVC.swift in Sources */,
 				DFE659F41E80CFA3007F9EC5 /* RxTabBarVC.swift in Sources */,
 				DFC9181D1E826B9200E36B19 /* RxParkVC.swift in Sources */,
 				DFE65A021E80D11E007F9EC5 /* RxAccountVC.swift in Sources */,
 				DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */,
+				DF51997B1E88FC310089D5AB /* RxParkViewModel.swift in Sources */,
 				DFC9181B1E82644300E36B19 /* RxHomeHeadCell.swift in Sources */,
 				DF5979661E83707400D55459 /* RxNetTool.swift in Sources */,
 				DFE65A001E80D110007F9EC5 /* RxMessageVC.swift in Sources */,

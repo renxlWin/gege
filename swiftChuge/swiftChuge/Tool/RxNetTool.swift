@@ -35,11 +35,21 @@ class RxNetTool: AFHTTPSessionManager {
         
         //MARK : 设置请求参数格式
         tool.requestSerializer.willChangeValue(forKey: "timeoutInterval");
+        
         tool.requestSerializer.timeoutInterval = 15.0;
+        
         tool.requestSerializer.didChangeValue(forKey: "timeoutInterval");
         
         tool.requestSerializer = AFJSONRequestSerializer(writingOptions: JSONSerialization.WritingOptions(rawValue: 0));
+        
         tool.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type");
+        
+        let token = UserDefaults.standard.string(forKey: "token");
+        
+        if !(token?.isEmpty)! {
+            
+            tool.requestSerializer.setValue(token, forHTTPHeaderField: "token");
+        }
         
         let resonponse = AFJSONResponseSerializer(readingOptions: JSONSerialization.ReadingOptions(rawValue: 0));
         
@@ -50,3 +60,4 @@ class RxNetTool: AFHTTPSessionManager {
         return tool
     }()
 }
+
