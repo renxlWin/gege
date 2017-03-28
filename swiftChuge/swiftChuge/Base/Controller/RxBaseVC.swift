@@ -64,7 +64,44 @@ class RxBaseVC: UIViewController {
         
         alertVC.addAction(setAction);
         
-        present(alertVC, animated: true, completion: nil);
+        getCurrentWinVC().present(alertVC, animated: true, completion: nil);
     }
     
+    
+    private func getCurrentWinVC() -> UIViewController{
+        
+        let result :UIViewController?;
+        
+        var window = UIApplication.shared.keyWindow;
+        
+        if (window?.windowLevel != UIWindowLevelNormal){
+            
+            let windowArr = UIApplication.shared.windows;
+            
+            for tempWin in windowArr {
+                
+                if tempWin.windowLevel == UIWindowLevelNormal {
+                    
+                    window = tempWin;
+                    
+                    break;
+                }
+            }
+        }
+        
+        let frontView = window?.subviews[0];
+        
+        let nextResponse = frontView?.next;
+        
+        if (nextResponse?.isKind(of: NSClassFromString("UIViewController")!))!{
+            
+            result = nextResponse as! UIViewController?;
+            
+        }else{
+            
+            result = window?.rootViewController;
+        }
+        
+        return result!;
+    }
 }

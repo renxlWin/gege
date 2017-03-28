@@ -43,14 +43,6 @@ enum RxNetToolErrorEnum: Int {
 
 class RxNetTool: AFHTTPSessionManager {
     
-    typealias RXResponseSuccess = (_ response : AnyObject) -> Void
-    
-    typealias RXResponseFail = (_ error : NSError) -> Void
-    
-    typealias RXDownloadProgress = (_ bytesProgress : Int64 , _ totalBytesProgress : Int64) -> Void
-    
-    typealias RXURLSessionTask = URLSessionTask;
-    
     static let sharedInstance: RxNetTool = {
         
         let tool = RxNetTool()
@@ -67,9 +59,10 @@ class RxNetTool: AFHTTPSessionManager {
         
         let token = UserDefaults.standard.string(forKey: "token");
         
-        if !(token?.isEmpty)! {
+        if let vaildToken = token{
             
-            tool.requestSerializer.setValue(token, forHTTPHeaderField: "token");
+            tool.requestSerializer.setValue(vaildToken, forHTTPHeaderField: "token");
+            
         }
         
         let resonponse = AFJSONResponseSerializer(readingOptions: JSONSerialization.ReadingOptions(rawValue: 0));
@@ -86,9 +79,9 @@ class RxNetTool: AFHTTPSessionManager {
 
 extension RxNetTool {
     
-    func rx_request(requestType : RxNetToolRequestEnum , urlString : String , parameters : Any? , success : @escaping RXResponseSuccess ,fail : RXResponseFail , progress : RXDownloadProgress) {
+    func rx_request(requestType : RxNetToolRequestEnum , urlString : String , parameters : Any? , success :  RXResponseSuccess? ,fail :  RXResponseFail? , progress : RXDownloadProgress?){
         
-        if urlString.isEmpty {return};
+        if urlString.isEmpty {return };
         
         let urlStr = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!;
         
@@ -98,23 +91,76 @@ extension RxNetTool {
                 
             }, success: { (task, responseObject) in
                 
-                success(responseObject as AnyObject);
+                if let successBlock = success {
+                    
+                    successBlock(responseObject as AnyObject);
+                }
                 
             }, failure: { (task, error) in
                 
+                if let failBlock = fail {
+                    
+                    failBlock(error);
+                }
                 
             })
             
         }else if (requestType == .RXHttpRequestTypeGet){
             
+            RxNetManager.get(urlStr, parameters: parameters, progress: { (progress) in
+                
+            }, success: { (task, responseObject) in
+                
+                if let successBlock = success {
+                    
+                    successBlock(responseObject as AnyObject);
+                }
+                
+            }, failure: { (task, error) in
+                
+                if let failBlock = fail {
+                    
+                    failBlock(error);
+                }
+            })
+            
         }else if (requestType == .RXHttpRequestTypePut){
+            
+            RxNetManager.put(urlStr, parameters: parameters, success: { (task, responseObject) in
+                
+                if let successBlock = success {
+                    
+                    successBlock(responseObject as AnyObject);
+                }
+                
+            }, failure: { (task, error) in
+                
+                if let failBlock = fail {
+                    
+                    failBlock(error);
+                }
+                
+            })
             
         }else if (requestType == .RXHttpRequestTypeDelete){
             
+            RxNetManager.delete(urlStr, parameters: parameters, success: { (task, responseObject) in
+                
+                if let successBlock = success {
+                    
+                    successBlock(responseObject as AnyObject);
+                }
+                
+            }, failure: { (task, error) in
+                
+                if let failBlock = fail {
+                    
+                    failBlock(error);
+                }
+                
+            })
             
         }
-        
     }
-    
 }
 

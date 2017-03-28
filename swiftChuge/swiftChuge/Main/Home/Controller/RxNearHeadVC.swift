@@ -68,26 +68,22 @@ extension RxNearHeadVC {
     
     func loadInfo(){
         
-        let urlStr = SERVER_URL_Date.appending("user/datemanagenet/rollMessage/v1");
-        
-        let emptyString = "a";
-        
-        RxNetManager.post(urlStr, parameters: ["type":emptyString], progress: nil, success: { (task, responseObject) in
-            
-//            let result = responseObject as? [String: AnyObject];
+//        let urlStr = SERVER_URL_Date.appending("user/datemanagenet/rollMessage/v1");
+//        
+//        let emptyString = "";
+//        
+//        RxNetManager.rx_request(requestType: .RXHttpRequestTypePost, urlString: urlStr, parameters: ["type":emptyString], success: { (response) in
 //            
-//            if let dict = result {
-//                
-//                let listArr = dict["rollMessages"];
-//                
-//                print(listArr);
-//                
-//            }
-            
-        }) {  (task, error) in
-            
-            print(error);
-        };
+////            debugPrint(response);
+//            
+//        }, fail: { (error) in
+//            
+////            debugPrint(error);
+//            
+//        }) { (current, total) in
+//            
+//            
+//        };
         
     }
     

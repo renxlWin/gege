@@ -48,6 +48,9 @@ func set_color(red:CGFloat,green:CGFloat,blue:CGFloat,alpha: CGFloat) -> UIColor
 let RxNetManager = RxNetTool.sharedInstance;
 let RxLocationManager = RxLocationTool.sharedInstance;
 
+//MARK : ViewModel
+let RxParkManager = RxParkViewModel.sharedInstance;
+
 
 //MARK : 位置
 let currentLatitude = RxLocationManager.latitude;
@@ -60,5 +63,12 @@ let currentLongitude = RxLocationManager.longitude;
 let screenHeight = UIScreen.main.bounds.height;
 let screenWidth = UIScreen.main.bounds.width;
 
+
+//回调闭包
+typealias RXResponseSuccess = (_ response : AnyObject) -> Void
+
+typealias RXResponseFail = (_ error : Error) -> Void
+
+typealias RXDownloadProgress = (_ bytesProgress : Int64 , _ totalBytesProgress : Int64) -> Void
 
 

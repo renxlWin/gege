@@ -70,12 +70,7 @@ class RxParkVC: RxBaseVC {
         return arr;
     }()
     
-    lazy var parkIdArr : NSMutableArray = {
-        
-        let arr = NSMutableArray()
-        
-        return arr;
-    }()
+    
 }
 
 
@@ -98,30 +93,19 @@ extension RxParkVC {
             return;
         }
         
-        var dict = [String : AnyObject]();
-        
-        dict["latitude"] = String(format: "%.15f", currentLatitude) as AnyObject?;
-        
-        dict["longitude"] = String(format: "%.15f", currentLongitude) as AnyObject?;
-        
-        dict["pageIndex"] = parkPage as AnyObject?;
-        
-        var idArr : [String] = [String]();
-        
-        for dateId in parkIdArr {
+        RxParkManager.loadParkData(parkPage: parkPage, success: { [weak self](response) in
             
-            if (parkIdArr.index(of: dateId)/10 == parkPage - 1) {
-                
-                idArr.append(dateId as! String);
-                
-            }
+            self?.tableView.mj_header.endRefreshing();
             
-        }
-        
-        dict["dataIds"] = idArr as AnyObject?;
-        
-        
-        
+            self?.tableView.mj_footer.endRefreshing();
+            
+        }, fail: {  [weak self]
+            (error) in
+            self?.tableView.mj_header.endRefreshing();
+            
+            self?.tableView.mj_footer.endRefreshing();
+            
+        }, progress: nil)
     }
 }
 
