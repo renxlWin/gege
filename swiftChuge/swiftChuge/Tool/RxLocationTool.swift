@@ -78,8 +78,6 @@ extension RxLocationTool : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        debugPrint(locations.last ?? "定位失败");
-        
         longitude = (locations.last?.coordinate.longitude)!;
         
         latitude = (locations.last?.coordinate.latitude)!;

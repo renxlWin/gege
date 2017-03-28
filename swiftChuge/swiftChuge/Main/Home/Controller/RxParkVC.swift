@@ -99,11 +99,17 @@ extension RxParkVC {
             
             self?.tableView.mj_footer.endRefreshing();
             
+            print(response);
+            
+            
         }, fail: {  [weak self]
             (error) in
+            
             self?.tableView.mj_header.endRefreshing();
             
             self?.tableView.mj_footer.endRefreshing();
+            
+            print(error);
             
         }, progress: nil)
     }
