@@ -63,9 +63,9 @@ class RxParkVC: RxBaseVC {
         return tableView;
     }()
     
-    lazy var parkArr : NSMutableArray = {
+    lazy var parkArr : [Any] = {
        
-        let arr = NSMutableArray()
+        let arr = [Any]()
         
         return arr;
     }()
@@ -99,7 +99,15 @@ extension RxParkVC {
             
             self?.tableView.mj_footer.endRefreshing();
             
-            print(response);
+            if let modelArr = response as? [Any] {
+                
+                for model in modelArr{
+                    
+                    self?.parkArr.append(model);
+                }
+                
+                self?.tableView.reloadData();
+            }
             
             
         }, fail: {  [weak self]
@@ -109,7 +117,7 @@ extension RxParkVC {
             
             self?.tableView.mj_footer.endRefreshing();
             
-            print(error);
+            SVProgressHUD.showError(withStatus: "网络错误");
             
         }, progress: nil)
     }

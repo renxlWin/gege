@@ -10,7 +10,7 @@ import UIKit
 
 class RxHomeHeadCell: UITableViewCell {
     
-    static func cellWithTableView(tableView : UITableView) -> RxHomeHeadCell{
+    func cellWithTableView(tableView : UITableView) -> RxHomeHeadCell{
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "homeHead")
         

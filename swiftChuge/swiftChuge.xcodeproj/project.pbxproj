@@ -33,6 +33,7 @@
 		DFFD2A2D1E8B6882007889CB /* RxHomeHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A2C1E8B6882007889CB /* RxHomeHeadCell.swift */; };
 		DFFD2A2F1E8B68B0007889CB /* RxParkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A2E1E8B68B0007889CB /* RxParkViewModel.swift */; };
 		DFFD2A311E8B68C8007889CB /* RxParkDynimicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A301E8B68C8007889CB /* RxParkDynimicModel.swift */; };
+		DFFD2A331E8BA89F007889CB /* RxParkDynamicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A321E8BA89F007889CB /* RxParkDynamicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		DFFD2A2C1E8B6882007889CB /* RxHomeHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxHomeHeadCell.swift; sourceTree = "<group>"; };
 		DFFD2A2E1E8B68B0007889CB /* RxParkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkViewModel.swift; sourceTree = "<group>"; };
 		DFFD2A301E8B68C8007889CB /* RxParkDynimicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkDynimicModel.swift; sourceTree = "<group>"; };
+		DFFD2A321E8BA89F007889CB /* RxParkDynamicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkDynamicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFD2A2C1E8B6882007889CB /* RxHomeHeadCell.swift */,
+				DFFD2A321E8BA89F007889CB /* RxParkDynamicCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				DFC9181D1E826B9200E36B19 /* RxParkVC.swift in Sources */,
 				DFE65A021E80D11E007F9EC5 /* RxAccountVC.swift in Sources */,
 				DFFD2A311E8B68C8007889CB /* RxParkDynimicModel.swift in Sources */,
+				DFFD2A331E8BA89F007889CB /* RxParkDynamicCell.swift in Sources */,
 				DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */,
 				DFFD2A2F1E8B68B0007889CB /* RxParkViewModel.swift in Sources */,
 				DF5979661E83707400D55459 /* RxNetTool.swift in Sources */,

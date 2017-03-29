@@ -64,8 +64,6 @@ extension RxParkViewModel {
             
             if let successBlock = success{
                 
-                successBlock(response);
-                
                 if (parkPage == 1) {
                     
                     if let dataDict = response as? [String : Any] , let idArr = dataDict["mixdataIds"] as? [Any] {
@@ -73,14 +71,11 @@ extension RxParkViewModel {
                         weakSelf?.parkIdArr = idArr;
                         
                     }
-                    
-                    print(weakSelf?.parkIdArr ?? "失败");
-                    
                 }
                 
+                var parkArr : [Any] = [Any]() ;
+                
                 if let dataDict = response as? [String : Any] , let jsonArr = dataDict["mixDataInfoList"] as? [Any] {
-                    
-                    var parkArr : Array<Any>?;
                     
                     if jsonArr.count > 0 {
                         
@@ -94,7 +89,7 @@ extension RxParkViewModel {
                                     
                                     let model : RxParkDynimicModel = RxParkDynimicModel.mj_object(withKeyValues: dataDict);
                                  
-                                    parkArr?.append(model);
+                                    parkArr.append(model);
                                     
                                 }
                                 
@@ -107,6 +102,7 @@ extension RxParkViewModel {
                     
                 }
                 
+                successBlock(parkArr as AnyObject);
                 
             }
             
