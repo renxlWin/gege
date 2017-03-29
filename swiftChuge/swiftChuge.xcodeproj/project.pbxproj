@@ -13,12 +13,10 @@
 		94A0FA0B13A77C3773FFAB15 /* Pods_swiftChuge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */; };
 		DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38AABE1E820EC500725252 /* RxTabBar.swift */; };
 		DF5199791E88B4D50089D5AB /* RxLocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5199781E88B4D50089D5AB /* RxLocationTool.swift */; };
-		DF51997B1E88FC310089D5AB /* RxParkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51997A1E88FC310089D5AB /* RxParkViewModel.swift */; };
 		DF5979661E83707400D55459 /* RxNetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5979651E83707400D55459 /* RxNetTool.swift */; };
 		DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */; };
 		DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6643341E81204700F17EF3 /* UIImage+Extension.swift */; };
 		DFC918191E82579E00E36B19 /* RxNearHeadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */; };
-		DFC9181B1E82644300E36B19 /* RxHomeHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9181A1E82644300E36B19 /* RxHomeHeadCell.swift */; };
 		DFC9181D1E826B9200E36B19 /* RxParkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9181C1E826B9200E36B19 /* RxParkVC.swift */; };
 		DFE659A81E80C829007F9EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE659A71E80C829007F9EC5 /* AppDelegate.swift */; };
 		DFE659AD1E80C829007F9EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE659AB1E80C829007F9EC5 /* Main.storyboard */; };
@@ -32,6 +30,9 @@
 		DFE659FE1E80D0FA007F9EC5 /* RxWishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE659FD1E80D0FA007F9EC5 /* RxWishVC.swift */; };
 		DFE65A001E80D110007F9EC5 /* RxMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE659FF1E80D110007F9EC5 /* RxMessageVC.swift */; };
 		DFE65A021E80D11E007F9EC5 /* RxAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE65A011E80D11E007F9EC5 /* RxAccountVC.swift */; };
+		DFFD2A2D1E8B6882007889CB /* RxHomeHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A2C1E8B6882007889CB /* RxHomeHeadCell.swift */; };
+		DFFD2A2F1E8B68B0007889CB /* RxParkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A2E1E8B68B0007889CB /* RxParkViewModel.swift */; };
+		DFFD2A311E8B68C8007889CB /* RxParkDynimicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD2A301E8B68C8007889CB /* RxParkDynimicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +66,10 @@
 		A6E3ACF28F36833B43F1159A /* Pods_swiftChuge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChuge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF38AABE1E820EC500725252 /* RxTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTabBar.swift; sourceTree = "<group>"; };
 		DF5199781E88B4D50089D5AB /* RxLocationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxLocationTool.swift; sourceTree = "<group>"; };
-		DF51997A1E88FC310089D5AB /* RxParkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxParkViewModel.swift; path = swiftChuge/Tool/RxParkViewModel.swift; sourceTree = SOURCE_ROOT; };
 		DF5979651E83707400D55459 /* RxNetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNetTool.swift; sourceTree = "<group>"; };
 		DF6643311E811B2E00F17EF3 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		DF6643341E81204700F17EF3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DFC918181E82579E00E36B19 /* RxNearHeadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxNearHeadVC.swift; sourceTree = "<group>"; };
-		DFC9181A1E82644300E36B19 /* RxHomeHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxHomeHeadCell.swift; path = swiftChuge/Main/Home/Controller/RxHomeHeadCell.swift; sourceTree = SOURCE_ROOT; };
 		DFC9181C1E826B9200E36B19 /* RxParkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkVC.swift; sourceTree = "<group>"; };
 		DFE659A41E80C829007F9EC5 /* swiftChuge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChuge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE659A71E80C829007F9EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = swiftChuge/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -90,6 +89,9 @@
 		DFE659FF1E80D110007F9EC5 /* RxMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxMessageVC.swift; sourceTree = "<group>"; };
 		DFE65A011E80D11E007F9EC5 /* RxAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxAccountVC.swift; sourceTree = "<group>"; };
 		DFE65A041E80D613007F9EC5 /* swiftChuge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "swiftChuge-Bridging-Header.h"; path = "../../swiftChuge-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFFD2A2C1E8B6882007889CB /* RxHomeHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxHomeHeadCell.swift; sourceTree = "<group>"; };
+		DFFD2A2E1E8B68B0007889CB /* RxParkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkViewModel.swift; sourceTree = "<group>"; };
+		DFFD2A301E8B68C8007889CB /* RxParkDynimicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParkDynimicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		DFE659DE1E80CA05007F9EC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DFFD2A301E8B68C8007889CB /* RxParkDynimicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,7 +308,7 @@
 		DFE659DF1E80CA05007F9EC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DFC9181A1E82644300E36B19 /* RxHomeHeadCell.swift */,
+				DFFD2A2C1E8B6882007889CB /* RxHomeHeadCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,7 +316,7 @@
 		DFE659E01E80CA05007F9EC5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DF51997A1E88FC310089D5AB /* RxParkViewModel.swift */,
+				DFFD2A2E1E8B68B0007889CB /* RxParkViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -760,12 +763,13 @@
 				DFE659F41E80CFA3007F9EC5 /* RxTabBarVC.swift in Sources */,
 				DFC9181D1E826B9200E36B19 /* RxParkVC.swift in Sources */,
 				DFE65A021E80D11E007F9EC5 /* RxAccountVC.swift in Sources */,
+				DFFD2A311E8B68C8007889CB /* RxParkDynimicModel.swift in Sources */,
 				DF6643351E81204700F17EF3 /* UIImage+Extension.swift in Sources */,
-				DF51997B1E88FC310089D5AB /* RxParkViewModel.swift in Sources */,
-				DFC9181B1E82644300E36B19 /* RxHomeHeadCell.swift in Sources */,
+				DFFD2A2F1E8B68B0007889CB /* RxParkViewModel.swift in Sources */,
 				DF5979661E83707400D55459 /* RxNetTool.swift in Sources */,
 				DFE65A001E80D110007F9EC5 /* RxMessageVC.swift in Sources */,
 				DFC918191E82579E00E36B19 /* RxNearHeadVC.swift in Sources */,
+				DFFD2A2D1E8B6882007889CB /* RxHomeHeadCell.swift in Sources */,
 				DF6643321E811B2E00F17EF3 /* PrefixHeader.swift in Sources */,
 				DFE659A81E80C829007F9EC5 /* AppDelegate.swift in Sources */,
 				DF38AABF1E820EC500725252 /* RxTabBar.swift in Sources */,
