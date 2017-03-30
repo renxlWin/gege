@@ -101,6 +101,11 @@ extension RxParkVC {
             
             if let modelArr = response as? [Any] {
                 
+                if self?.parkPage == 1 {
+                    
+                    self?.parkArr.removeAll();
+                }
+                
                 for model in modelArr{
                     
                     self?.parkArr.append(model);

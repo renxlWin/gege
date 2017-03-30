@@ -13,6 +13,7 @@ target 'swiftChuge' do
   pod 'Alamofire'
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'RealmSwift'
   
   target 'swiftChugeTests' do
     inherit! :search_paths

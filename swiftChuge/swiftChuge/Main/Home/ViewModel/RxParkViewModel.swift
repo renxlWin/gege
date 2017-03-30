@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let RxParkVMInstance = RxParkViewModel()
 
@@ -18,6 +19,8 @@ class RxParkViewModel: NSObject {
         
         return tool;
     }
+    
+    
     
     lazy var parkIdArr : [Any] = {
         

@@ -15,7 +15,7 @@ class RxParkDynamicCell: UITableViewCell {
         // Initialization code
     }
 
-    func cellWithTableView(tableView : UITableView) -> RxParkDynamicCell{
+    class func cellWithTableView(tableView : UITableView) -> RxParkDynamicCell{
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "parkDynamic")
         

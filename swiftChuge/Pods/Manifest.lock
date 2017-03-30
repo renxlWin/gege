@@ -17,6 +17,11 @@ PODS:
   - Alamofire (4.3.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -28,6 +33,7 @@ DEPENDENCIES:
   - Alamofire
   - MJExtension
   - MJRefresh
+  - RealmSwift
   - SDWebImage
   - SnapKit
   - SVProgressHUD
@@ -37,10 +43,12 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: a2e41b9a8f0da77ee7c5760cc49d3f941d06c551
+PODFILE CHECKSUM: f55078c922d7e3a0aeee5d80ddb0fa4b8c2f6f74
 
 COCOAPODS: 1.2.1.beta.1
