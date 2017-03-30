@@ -13,14 +13,14 @@ private let RxParkVMInstance = RxParkViewModel()
 
 class RxParkViewModel: NSObject {
 
+    let realm = try! Realm()
+    
     class var sharedInstance : RxParkViewModel {
         
         let tool = RxParkVMInstance;
         
         return tool;
     }
-    
-    
     
     lazy var parkIdArr : [Any] = {
         
@@ -94,6 +94,11 @@ extension RxParkViewModel {
                                  
                                     parkArr.append(model);
                                     
+                                    try! weakSelf?.realm.write {
+                                        
+                                        weakSelf?.realm.add(model);
+                                    }
+                                    
                                 }
                                 
                                 
@@ -106,6 +111,10 @@ extension RxParkViewModel {
                 }
                 
                 successBlock(parkArr as AnyObject);
+                
+                let puppies = weakSelf?.realm.objects(RxParkDynimicModel.self);
+                
+                print(puppies?.count);
                 
             }
             

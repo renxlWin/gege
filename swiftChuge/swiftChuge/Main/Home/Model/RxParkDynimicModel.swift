@@ -9,42 +9,49 @@
 import UIKit
 import RealmSwift
 
-class RxParkDynimicModel: NSObject {
+class RxParkDynimicModel: Object {
 
-    var userId : String?;
+    dynamic var dynamicId : String?
     
-    var nickName : String?;
+    dynamic var userId : String?;
     
-    var gender : String?;
+    dynamic var nickName : String?;
     
-    var birth : String?;
+    dynamic var gender : String?;
     
-    var personalCredit : String?;
+    dynamic var birth : String?;
     
-    var userHeadPhoto : String?;
+    dynamic var personalCredit : String?;
     
-    var createTime : String?;
+    dynamic var userHeadPhoto : String?;
     
-    var point : Dictionary<String, Any>?;
+    dynamic var createTime : String?;
     
-    var content : String?;
+//    dynamic var point : Dictionary<String, Any>?;
     
-    var imageArray : Array<Any>?;
+    dynamic var content : String?;
     
-    var likeCount : String?;
+//    dynamic var imageArray : Array<Any>?;
     
-    var address : String?;
+    dynamic var likeCount : String?;
     
-    var paymentAuthentication : String?;
+    dynamic var address : String?;
     
-    var commentCount : String?;
+    dynamic var paymentAuthentication : String?;
     
-    var city : String?;
+    dynamic var commentCount : String?;
     
-    var doLike : Bool?;
+    dynamic var city : String?;
     
-    var dataType : String?;
+    var doLike : RealmOptional<Bool>?;
     
+    dynamic var dataType : String?;
+    
+    override static func primaryKey() -> String? {
+        return "dynamicId"
+    }
+
+
     
     override static func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
         return [
@@ -54,7 +61,6 @@ class RxParkDynimicModel: NSObject {
             "gender" : "userMDB.gender",
             "birth" : "userMDB.birth",
             "personalCredit" : "userMDB.personalCredit",
-            //             "userHeadPhoto" : "userHeadPhoto",
             "createTime" : "dynamicDetailMDB.createTime",
             "point" : "dynamicDetailMDB.point",
             "city" : "dynamicDetailMDB.city",
