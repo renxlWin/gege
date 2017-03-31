@@ -22,7 +22,6 @@ class RxTabBarVC: UITabBarController {
     
     private func setupChildVC(){
         
-        
         let homeVC = RxNearVC();
         navController(vc: homeVC, title: "附近", image: "near", selectImg: "near_sel");
         

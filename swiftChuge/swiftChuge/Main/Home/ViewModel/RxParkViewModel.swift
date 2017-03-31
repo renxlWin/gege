@@ -32,6 +32,29 @@ class RxParkViewModel: NSObject {
 
 extension RxParkViewModel {
     
+    func LoadLocaData(success : RXResponseSuccess?,fail : RXResponseFail?){
+        
+        let models = self.realm.objects(RxParkDynamicModel.self);
+        
+        if models.count > 0 {
+            
+            if let successBlock = success {
+                
+                successBlock(models);
+            }
+            
+        }else{
+            
+            if let failBlock = fail {
+                
+                let nsError = NSError(domain: "没数据", code: 1, userInfo: nil);
+                
+                failBlock(nsError as Error);
+            }
+            
+        }
+    }
+    
     func loadParkData(parkPage : Int , success :  RXResponseSuccess? ,fail :  RXResponseFail? , progress : RXDownloadProgress?){
         
         let urlStr = SERVER_URL_Dynamic.appending("user/dynamic/mixdataList/v1");
@@ -90,31 +113,21 @@ extension RxParkViewModel {
                                 
                                 if type == "D" {
                                     
-                                    let model : RxParkDynimicModel = RxParkDynimicModel.mj_object(withKeyValues: dataDict);
+                                    let model : RxParkDynamicModel = RxParkDynamicModel.mj_object(withKeyValues: dataDict);
                                  
                                     parkArr.append(model);
                                     
                                     try! weakSelf?.realm.write {
                                         
-                                        weakSelf?.realm.add(model);
+                                        weakSelf?.realm.add(model, update: true);
                                     }
-                                    
                                 }
-                                
-                                
                             }
-                            
                         }
-                        
                     }
-                    
                 }
                 
                 successBlock(parkArr as AnyObject);
-                
-                let puppies = weakSelf?.realm.objects(RxParkDynimicModel.self);
-                
-                print(puppies?.count);
                 
             }
             
@@ -131,3 +144,4 @@ extension RxParkViewModel {
         
     }
 }
+

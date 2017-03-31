@@ -18,6 +18,8 @@ class RxBaseVC: UIViewController {
         
         setNav();
         
+        SVProgressHUD.setMinimumDismissTimeInterval(1.0);
+        
         weak var weakSelf = self
         
         checkLocationStatus = { () -> Bool in
@@ -33,7 +35,6 @@ class RxBaseVC: UIViewController {
     }
     
     var checkLocationStatus : (() -> Bool)?;
-    
     
     private func setNav(){
         

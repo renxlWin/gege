@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class RxParkDynimicModel: Object {
+class RxParkDynamicModel: Object {
 
     dynamic var dynamicId : String?
     
@@ -27,11 +27,13 @@ class RxParkDynimicModel: Object {
     
     dynamic var createTime : String?;
     
-//    dynamic var point : Dictionary<String, Any>?;
+    dynamic var latitude : String?;
+    
+    dynamic var longtitude : String?;
     
     dynamic var content : String?;
     
-//    dynamic var imageArray : Array<Any>?;
+    var imageArray = List<PhotoUrl>();
     
     dynamic var likeCount : String?;
     
@@ -51,7 +53,10 @@ class RxParkDynimicModel: Object {
         return "dynamicId"
     }
 
-
+    override static func mj_objectClassInArray() -> [AnyHashable : Any]! {
+        
+        return ["imageArray":"PhotoUrl"];
+    }
     
     override static func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
         return [
@@ -62,7 +67,6 @@ class RxParkDynimicModel: Object {
             "birth" : "userMDB.birth",
             "personalCredit" : "userMDB.personalCredit",
             "createTime" : "dynamicDetailMDB.createTime",
-            "point" : "dynamicDetailMDB.point",
             "city" : "dynamicDetailMDB.city",
             "content" : "dynamicDetailMDB.content",
             "likeCount" : "dynamicDetailMDB.likeCount",
@@ -70,7 +74,14 @@ class RxParkDynimicModel: Object {
             "dynamicId":"dynamicDetailMDB.id",
             "address":"dynamicDetailMDB.address",
             "anonymous":"dynamicDetailMDB.anonymous",
-            "paymentAuthentication":"userMDB.paymentAuthentication"
+            "paymentAuthentication":"userMDB.paymentAuthentication",
+            "latitude":"dynamicDetailMDB.point.x",
+            "longtitude":"dynamicDetailMDB.point.y"
         ];
     }
+}
+
+class PhotoUrl: Object {
+    
+    dynamic var name : String?;
 }

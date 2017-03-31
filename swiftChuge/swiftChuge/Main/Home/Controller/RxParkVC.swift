@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RxParkVC: RxBaseVC {
 
@@ -15,7 +16,8 @@ class RxParkVC: RxBaseVC {
 
         prepareUI();
         
-        tableView.mj_header.beginRefreshing();
+        checkLocationData();
+        
     }
     
     var parkPage = 1;
@@ -69,8 +71,6 @@ class RxParkVC: RxBaseVC {
         
         return arr;
     }()
-    
-    
 }
 
 
@@ -79,6 +79,30 @@ extension RxParkVC {
     func prepareUI() {
         
         view.addSubview(tableView);
+        
+    }
+    
+    func checkLocationData() {
+        
+        RxParkManager.LoadLocaData(success: { [weak self](response) in
+            
+            if let modelArr = response as? Results<RxParkDynamicModel> {
+                
+                for model in modelArr{
+                    
+                    self?.parkArr.append(model);
+                }
+                
+                self?.tableView.reloadData();
+            }
+            
+            
+        }) { (error) in
+            
+            self.tableView.mj_header .beginRefreshing();
+            
+            print(error);
+        }
         
     }
     
