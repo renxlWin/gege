@@ -47,13 +47,13 @@ class RxNetTool: AFHTTPSessionManager {
         
         let tool = RxNetTool()
         
+        tool.requestSerializer = AFJSONRequestSerializer(writingOptions: JSONSerialization.WritingOptions(rawValue: 0));
+        
         tool.requestSerializer.willChangeValue(forKey: "timeoutInterval");
         
         tool.requestSerializer.timeoutInterval = 15.0;
         
         tool.requestSerializer.didChangeValue(forKey: "timeoutInterval");
-        
-        tool.requestSerializer = AFJSONRequestSerializer(writingOptions: JSONSerialization.WritingOptions(rawValue: 0));
         
         tool.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type");
         

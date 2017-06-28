@@ -52,9 +52,9 @@ class RxBaseVC: UIViewController {
             
             let url = NSURL(string: UIApplicationOpenSettingsURLString);
             
-            if (UIApplication.shared.canOpenURL(url as! URL)){
+            if (UIApplication.shared.canOpenURL(url! as URL)){
                 
-                UIApplication.shared.openURL(url as! URL);
+                UIApplication.shared.openURL(url! as URL);
             }
             
         };
